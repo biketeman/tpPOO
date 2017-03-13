@@ -43,6 +43,30 @@ $router->addRoute(array(
     'ALL'   => array('AdminUserController', 'update') // Classe IndexController, Méthode index
 ));
 
+// modification
+// product
+$router->addRoute(array(
+    'route'  => '^/admin/products$',
+    'GET'   => array('AdminProductsController', 'index') // Classe IndexController, Méthode index
+));
+
+$router->addRoute(array(
+    'route'  => '^/admin/products/add$',
+    'ALL'   => array('AdminProductsController', 'add') // Classe IndexController, Méthode index
+));
+
+$router->addRoute(array(
+    'route'  => '^/admin/products/update$',
+    'ALL'   => array('AdminProductsController', 'update') // Classe IndexController, Méthode index
+));
+
+$router->addRoute(array(
+    'route'  => '^/admin/products/delete$',
+    'ALL'   => array('AdminProductsController', 'delete') // Classe IndexController, Méthode index
+));
+//fin modification product
+
+
 // Authentification des membres
 $router->addRoute(array(
     'route'  => '^/admin/login$',
